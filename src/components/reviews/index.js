@@ -13,7 +13,7 @@ const Reviews = () => {
                 </div>
                 <div className="flex reviews_wrapper">
                     <div className="w-1/2 p-4">
-                        <p>This is the best service for games that use a vpn connection. Thanks to this service my game is more focused and there are no crashes from the game as it was before. Stable connection and reliability, that's what LAGX says about the service</p>
+                        <p>This is the best service for games that use a vpn connection. Thanks to this service my game is more focused and there are no crashes from the game as it was before. Stable connection and reliability, thats what LAGX says about the service</p>
                         <div className='rating_wrapper'>
                             <div className="flex items-center pt-4">
                                 <span className='rating'>5.0</span>
@@ -32,7 +32,7 @@ const Reviews = () => {
                         </div>
                     </div>
                     <div className="w-1/2 p-4">
-                        <p>This is the best service for games that use a vpn connection. Thanks to this service my game is more focused and there are no crashes from the game as it was before. Stable connection and reliability, that's what LAGX says about the service</p>
+                        <p>This is the best service for games that use a vpn connection. Thanks to this service my game is more focused and there are no crashes from the game as it was before. Stable connection and reliability, thats what LAGX says about the service</p>
                         <div className='rating_wrapper'>
                             <div className="flex items-center pt-4">
                                 <span className='rating'>4.7</span>
