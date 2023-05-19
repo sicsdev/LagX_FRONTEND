@@ -22,3 +22,7 @@
 .navbar .links {
     justify-content: center;
 }
+
+.navbar .links a.active {
+    border-bottom: 1px solid blue;
+}
