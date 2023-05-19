@@ -16,12 +16,21 @@
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+} */
+
+body {
+  background: #090D1B;
+  color: #fff;
+}
+
+@media screen and (max-width:767px) {
+  .container.px-20 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

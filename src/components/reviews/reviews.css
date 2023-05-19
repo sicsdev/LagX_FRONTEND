@@ -1,0 +1,20 @@
+.reviews .select_plan {
+    color: #767982;
+}
+
+.reviews_wrapper {
+    max-width: 80%;
+    margin: auto;
+    gap: 100px;
+}
+
+.rating{
+    color: #767982;
+    margin-right: 8px;
+}
+.reviews .heading2{
+    color: #767982;
+}
+.rating_wrapper {
+    margin-left: 100px;
+}

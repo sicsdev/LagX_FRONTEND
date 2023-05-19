@@ -1,0 +1,24 @@
+.navbar .links {
+    background-color: #0F1523;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+.navbar .links a {
+    color: #70747E;
+}
+
+.navbar .logo,
+.navbar .links,
+.navbar .login {
+    width: 30%;
+}
+
+.navbar .login {
+    justify-content: center;
+    gap: 44px;
+}
+
+.navbar .links {
+    justify-content: center;
+}

@@ -1,0 +1,39 @@
+.footer .container .grid.grid-cols-1 {
+    border-top: 0.5px solid #222632;
+    padding-top: 50px;
+}
+
+.footer {
+    background: #090D1B;
+}
+
+.footer .footer_logo {
+    width: 135px;
+}
+
+.footer .flex.flex-col h3 {
+    color: #7D7F87;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.footer .logo_wrapper {
+    justify-content: space-between;
+}
+
+.footer li.text-sm {
+    margin: 14px 0;
+}
+
+.download_btn {
+    border-radius: 50px !important;
+    padding: 12px 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download_btn img {
+    width: 30px;
+    margin-right: 10px;
+}
