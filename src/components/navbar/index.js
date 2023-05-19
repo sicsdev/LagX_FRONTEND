@@ -4,7 +4,7 @@ import './navbar.css';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-    const pathname = usePathname();
+    // const pathname = usePathname();
     return (
         <>
             <nav className="navbar">
@@ -19,7 +19,7 @@ const Navbar = () => {
                             <Link href="#" className="text-sm px-3 py-2">Home</Link>
                             <Link href="#" className="text-sm px-3 py-2">Games</Link>
                             <Link href="#" className="text-sm px-3 py-2">How it works</Link>
-                            <Link href="/pricing" className={pathname.startsWith('/pricing') ? 'text-sm px-3 py-2 active' : 'text-sm px-3 py-2'} >Pricing</Link>
+                            <Link href="/pricing" className="text-sm px-3 py-2" >Pricing</Link>
                             <Link href="#" className="text-sm px-3 py-2">FAQ</Link>
                         </div>
                         <div className="hidden md:flex login">
