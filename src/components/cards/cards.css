@@ -43,7 +43,7 @@ img.tick {
 
 .enterprice {
     position: relative;
-    background-image: url('../../../public/images/rect.png');
+    background-image: url('../../../public/images/normal.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -90,6 +90,7 @@ img.tick {
 
 img.payment_icon {
     width: 52px;
+    border-radius: 5px;
 }
 
 .paybutton {
@@ -104,6 +105,7 @@ img.payment_icon {
     border: none;
     width: 458px;
     cursor: pointer;
+    border: 1px solid transparent;
 }
 
 p.total-order {
@@ -135,34 +137,40 @@ span.ml-3 {
 .after\:bg-white::after {
     background-color: #6ddb29;
 }
+
 b.price {
     color: #3882F2;
 }
-.saving-btn{
+
+.saving-btn {
     cursor: pointer;
     height: 25px;
     background: #3A2981;
     border-radius: 33px;
     width: 60px;
 }
+
 span.pay-opt {
     font-size: 11px;
     color: #999a9b;
     margin-left: 27px;
 }
+
 span.ww {
     display: flex;
 }
-.diamond_img{
+
+.diamond_img {
     max-width: 91px;
     height: auto;
 }
+
 button.text-sm.mt-3.bg-blue-600.text-white.py-2.sub-btn {
     width: 100%;
     border-radius: 20px;
 }
 
-.sub-grey-btn{
+.sub-grey-btn {
     background: #172041;
     border-radius: 300px;
     width: 100%;
@@ -170,6 +178,7 @@ button.text-sm.mt-3.bg-blue-600.text-white.py-2.sub-btn {
     justify-content: center;
     margin: 0px auto;
 }
+
 .alice-carousel__prev-btn {
     position: absolute;
     top: 0;
@@ -177,6 +186,7 @@ button.text-sm.mt-3.bg-blue-600.text-white.py-2.sub-btn {
     z-index: 9999;
     left: -60px;
 }
+
 .alice-carousel__prev-btn-wrapper p.alice-carousel__prev-btn-item.__inactive {
     opacity: 1;
     width: 55px !important;
@@ -184,7 +194,9 @@ button.text-sm.mt-3.bg-blue-600.text-white.py-2.sub-btn {
     align-items: center;
     justify-content: center;
 }
-.alice-carousel__prev-btn-wrapper span {    height: 45px;
+
+.alice-carousel__prev-btn-wrapper span {
+    height: 45px;
     font-size: 34px;
     background: #2C5DFE;
     border: 1px solid #2C5DFE;
@@ -197,6 +209,7 @@ button.text-sm.mt-3.bg-blue-600.text-white.py-2.sub-btn {
     color: #fff;
     padding-bottom: 7px;
 }
+
 .alice-carousel__next-btn {
     position: absolute;
     top: 0;
@@ -205,7 +218,8 @@ button.text-sm.mt-3.bg-blue-600.text-white.py-2.sub-btn {
     right: -60px;
 }
 
-.alice-carousel__next-btn-wrapper span {    height: 45px;
+.alice-carousel__next-btn-wrapper span {
+    height: 45px;
     font-size: 34px;
     background: #2C5DFE;
     border: 1px solid #2C5DFE;
@@ -218,9 +232,11 @@ button.text-sm.mt-3.bg-blue-600.text-white.py-2.sub-btn {
     color: #fff;
     padding-bottom: 7px;
 }
+
 ul.alice-carousel__dots {
     display: none;
 }
+
 .item .p-4 {
     display: flex;
     flex-direction: column;
@@ -228,4 +244,63 @@ ul.alice-carousel__dots {
     align-items: center;
     margin: 0px auto;
     width: 65%;
+}
+
+.navbar .links a.active {
+    border-bottom: 1.5px solid blue;
+}
+
+.card_basic {
+
+    border: 1px solid transparent;
+
+}
+
+.border-blue-500 {
+    border-color: #4d80ff;
+
+}
+
+.card_basic_image {
+
+    border: 1px solid transparent;
+
+}
+
+.border1-blue-500 {
+    border: none;
+    background-image: url('../../../public/images/active.png');
+    right: 0.2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 25px;
+}
+
+.input_border-blue-500 {
+    border-color: #4d80ff;
+
+}
+
+.active_input {
+    border-color: blue !important;
+    outline: none;
+    box-shadow: none;
+}
+
+.creditcard_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px
+}
+
+span.images img {
+    width: 30px;
 }

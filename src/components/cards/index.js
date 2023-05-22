@@ -1,11 +1,24 @@
+'use client';
 import React, { useState } from "react";
 import "./cards.css";
-
+import { usePathname } from 'next/navigation';
 const Cards = () => {
   const [payPal, setPayPal] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const [isActiveLink, setIsActiveLink] = useState(false);
   const [bit, setBit] = useState(false);
   const [credit, setCredit] = useState(false);
   const [others, setOthers] = useState(false);
+  const pathname = usePathname();
+
+  const handlerActive = () => {
+    setIsActive(true);
+    setIsActiveLink(false);
+  };
+  const handlerActive2 = () => {
+    setIsActiveLink(true);
+    setIsActive(false);
+  };
 
   const Payypal = () => {
     setPayPal(!payPal);
@@ -14,10 +27,10 @@ const Cards = () => {
   const BittCoin = () => {
     setBit(!bit);
   };
-  const Credd = () => {
+  const Credit = () => {
     setCredit(!credit);
   };
-  const Otherr = () => {
+  const Other = () => {
     setOthers(!others);
   };
   return (
@@ -25,8 +38,15 @@ const Cards = () => {
       <div className="main-container">
         <div className="row cards_inner">
           <div className="text-left">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="card_basic shadow-md rounded-lg p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+              <div
+                className={`card_basic shadow-md rounded-lg p-6 ${isActive ? 'border-blue-500' : ''
+                  }`}
+                onClick={handlerActive}
+
+              >
+
+                {/* <div className="card_basic shadow-md rounded-lg p-6  active:border-blue-500"> */}
                 <div className="basic-card">
                   <div className="basic-image">
                     <img className="diamonds_img" src="/images/diamond.png" />
@@ -98,8 +118,13 @@ const Cards = () => {
                   </button>
                 </div>
               </div>
+              <div
+                className={`enterprice card_basic_image shadow-md rounded-lg p-6 ${isActiveLink ? 'border1-blue-500' : ''
+                  }`}
+                onClick={handlerActive2}
 
-              <div className="enterprice card_basic shadow-md rounded-lg p-6">
+              >
+                {/* <div className="enterprice card_basic shadow-md rounded-lg p-6"> */}
                 <div className="special_btn">
                   <button className=" text-sm mt-3 bg-blue-600 text-white py-2 px-4 rounded">
                     <b>Special</b>
@@ -185,7 +210,7 @@ const Cards = () => {
             </p>
             <input
               type="email"
-              className="appearance-none border border-gray-300 rounded py-2 px-4 mt-3 email-input leading-tight focus:outline-none focus:border-blue-500 email"
+              className="appearance-none border border-gray-300 rounded py-2 px-4 mt-3 email-input leading-tight focus:outline-none focus:border-blue-500  email"
               placeholder="Email"
             />
 
@@ -207,18 +232,50 @@ const Cards = () => {
             /> */}
             <p
               className="appearance-none border border-gray-300 rounded py-2 px-4 leading-tight mt-3 email-input focus:outline-none focus:border-blue-500 email"
-              onClick={() => Credd()}
+              onClick={() => Credit()}
             >
-              <span className="ww">
-                <img
-                  className=""
-                  src="./images/direction-down 01.png"
-                  alt="Image 3"
-                />
-                Credit Card
-              </span>{" "}
-              <span className="pay-opt">Option - 1</span>{" "}
+              <div className="creditcard_main">
+                <div>
+                  <span className="ww">
+                    <img
+                      className=""
+                      src="./images/direction-down 01.png"
+                      alt="Image 3"
+                    />
+                    Credit Card
+                  </span>{" "}
+                  <span className="pay-opt">Option-1</span>{" "}
+                </div>
+                <span className="images">
+                  <img
+                    className="payment_icon"
+                    src="./images/XMLID_328.png"
+                    alt="Image 1"
+                  />
+                  <img
+                    className="payment_icon"
+                    src="./images/visa.png"
+                    alt="Image 1"
+                  />
+                  <img
+                    className="payment_icon"
+                    src="./images/elo.png"
+                    alt="Image 1"
+                  />
+                  <img
+                    className="payment_icon"
+                    src="./images/hipercard.png"
+                    alt="Image 1"
+                  />
+                  <img
+                    className="payment_icon"
+                    src="./images/american-express.png"
+                    alt="Image 1"
+                  />
+                </span>
+              </div>
             </p>
+
 
             {credit ? (
               <>
@@ -274,16 +331,30 @@ const Cards = () => {
               className="appearance-none border border-gray-300 rounded py-2 px-4 leading-tight mt-3 email-input focus:outline-none  focus:border-blue-500 email"
               onClick={() => Payypal()}
             >
-              <span className="ww">
-                <img
-                  className=""
-                  src="./images/direction-down 01.png"
-                  alt="Image 3"
-                />
-                Pay Pal{" "}
-              </span>{" "}
-              <span className="pay-opt">Option - 2</span>
+              <div className="creditcard_main">
+                <div>
+                  <span className="ww">
+                    <img
+                      className=""
+                      src="./images/direction-down 01.png"
+                      alt="Image 3"
+                    />
+                    Pay Pal{" "}
+                  </span>{" "}
+                  <span className="pay-opt">Option-2</span>
+                </div>
+                <span className="images">
+                  <img
+                    className="payment_icon"
+                    src="./images/payment-methods_light_paypal.png"
+                    alt="Image 1"
+                  />
+
+                </span>
+              </div>
+
             </p>
+
             {payPal ? (
               <>
                 {" "}
@@ -321,15 +392,28 @@ const Cards = () => {
               className="appearance-none border border-gray-300 rounded py-2 px-4 leading-tight mt-3 email-input focus:outline-none focus:border-blue-500 email"
               onClick={() => BittCoin()}
             >
-              <span className="ww">
-                <img
-                  className=""
-                  src="./images/direction-down 01.png"
-                  alt="Image 3"
-                />
-                Bitcoin{" "}
-              </span>
-              <span className="pay-opt">Option - 3</span>
+              <div className="creditcard_main">
+                <div>
+                  <span className="ww">
+                    <img
+                      className=""
+                      src="./images/direction-down 01.png"
+                      alt="Image 3"
+                    />
+                    Bitcoin{" "}
+                  </span>
+                  <span className="pay-opt">Option-3</span>
+                </div>
+                <span className="images">
+                  <img
+                    className="payment_icon"
+                    src="./images/bitcoin.png"
+                    alt="Image 1"
+                  />
+
+
+                </span>
+              </div>
             </p>
             {bit ? (
               <>
@@ -366,17 +450,39 @@ const Cards = () => {
             /> */}
             <p
               className="appearance-none border border-gray-300 rounded py-2 px-4 leading-tight mt-3 email-input focus:outline-none focus:border-blue-500 email"
-              onClick={() => Otherr()}
+              onClick={() => Other()}
             >
-              <span className="ww">
-                <img
-                  className=""
-                  src="./images/direction-down 01.png"
-                  alt="Image 3"
-                />
-                Other{" "}
-              </span>
-              <span className="pay-opt">Option - 4</span>
+              <div className="creditcard_main">
+                <div>
+                  <span className="ww">
+                    <img
+                      className=""
+                      src="./images/direction-down 01.png"
+                      alt="Image 3"
+                    />
+                    Other{" "}
+                  </span>
+                  <span className="pay-opt">Option - 4</span>
+                </div>
+                <span className="images">
+                  <img
+                    className="payment_icon"
+                    src="./images/unionpay.png"
+                    alt="Image 1"
+                  />
+                  <img
+                    className="payment_icon"
+                    src="./images/payment-methods_light_qiwi.png"
+                    alt="Image 1"
+                  />
+                  <img
+                    className="payment_icon"
+                    src="./images/payment-methods_light_ripple.png"
+                    alt="Image 1"
+                  />
+
+                </span>
+              </div>
             </p>
             {others ? (
               <>
@@ -384,7 +490,7 @@ const Cards = () => {
                 <p className="text_gray text-sm mt-3">
                   CONTINUE BELOW TO BUY A VPN SUBSCRIPTION WITH PAYMENTWALL.
                 </p>
-                <div className="grid grid-cols-3 gap-4 mt-3">
+                <div className="flex gap-12 mt-3">
                   <img
                     className="payment_icon"
                     src="./images/unionpay.png"
@@ -425,7 +531,7 @@ const Cards = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

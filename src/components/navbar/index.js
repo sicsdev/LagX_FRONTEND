@@ -1,12 +1,14 @@
 'use client';
-import React from 'react'
+import React, { useState } from "react";
 import Link from 'next/link';
 import './navbar.css';
 import { usePathname } from 'next/navigation';
 
 
 const Navbar = () => {
-    // const pathname = usePathname();
+    const pathname = usePathname();
+    const [isActive, setIsActive] = useState(false);
+
     return (
         <>
             <nav className="navbar">
@@ -17,12 +19,19 @@ const Navbar = () => {
                                 <img src='/images/logo.png' />
                             </Link>
                         </div>
-                        <div className="hidden md:flex links">
+                        {/* <div className="hidden md:flex links"> */}
+                        <div
+                            className={`hidden md:flex links nav_basic ${isActive ? 'border-blue-500' : ''
+                                }`}
+                            onClick={() => setIsActive(!isActive)}
+
+                        >
                             <Link href="#" className="text-sm px-3 py-2">Home</Link>
                             <Link href="#" className="text-sm px-3 py-2">Games</Link>
                             <Link href="#" className="text-sm px-3 py-2">How it works</Link>
-                            <Link href="/pricing" className="text-sm px-3 py-2" >Pricing</Link>
+                            <Link href="/pricing" className={pathname.startsWith('/pricing') ? 'text-sm px-3 py-2 active' : 'text-sm px-3 py-2'} >Pricing</Link>
                             <Link href="#" className="text-sm px-3 py-2">FAQ</Link>
+
                         </div>
                         <div className="hidden md:flex login">
                             <Link href="#" className="text-sm hover:text-white px-3 py-2">Login</Link>
@@ -37,7 +46,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav >
             <div>
             </div>
         </>

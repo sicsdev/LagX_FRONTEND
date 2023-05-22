@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .pricing {
     margin-top: 5rem;
 }
@@ -29,3 +31,14 @@
     width: 60%;
     float: left;
 }
+
+input.sr-only.peer:focus,
+input.sr-only.peer:active,
+input.sr-only.peer {
+    border: none !important;
+}
+
+/* .text-5xl {
+    font-size: 96px;
+    line-height: 1;
+} */

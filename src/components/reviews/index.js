@@ -6,7 +6,7 @@ const Reviews = () => {
         <div className='reviews'>
             <div class="container mx-auto py-8 px-20">
                 <div className="flex flex-col justify-center p-7 items-center">
-                    <h2 className='text-4xl font-bold mb-3'>REVIEWS</h2>
+                    <h2 className='text-[52px] tracking-wider font-bold mb-3 font-bebas-neue  '>REVIEWS</h2>
                     <div className="select_plan">
                         We are trusted by those, below you can read the reviews
                     </div>
