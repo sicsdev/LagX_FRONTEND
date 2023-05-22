@@ -1,7 +1,9 @@
+'use client';
 import React from 'react'
 import Link from 'next/link';
 import './navbar.css';
 import { usePathname } from 'next/navigation';
+
 
 const Navbar = () => {
     const pathname = usePathname();
