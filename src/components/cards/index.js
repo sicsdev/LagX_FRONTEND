@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from "react";
 import "./cards.css";
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 const Cards = () => {
   const [payPal, setPayPal] = useState(false);
@@ -49,7 +50,8 @@ const Cards = () => {
                 {/* <div className="card_basic shadow-md rounded-lg p-6  active:border-blue-500"> */}
                 <div className="basic-card">
                   <div className="basic-image">
-                    <img className="diamonds_img" src="/images/diamond.png" />
+                    <Image className="diamonds_img" src="/images/diamond.png" width={50}
+                      height={50} alt="Image_diamond" />
                   </div>
                   <div className="basic-card_inner">
                     <div className="basic-heading">
@@ -66,27 +68,36 @@ const Cards = () => {
                   <div className="content p-4">
                     <p className="p-2  card_list">
                       <span>
-                        <img
+                        <Image
                           className="tick"
-                          src="./images/PricingCheck (1).png"
+                          src="/images/PricingCheck (1).png"
+                          width={50}
+                          height={50}
+                          alt=""
                         />
                       </span>{" "}
                       You can Use only 4 games
                     </p>
                     <p className="p-2 card_list">
                       <span>
-                        <img
+                        <Image
                           className="tick"
-                          src="./images/PricingCheck (1).png"
+                          src="/images/PricingCheck (1).png"
+                          width={50}
+                          height={50}
+                          alt=""
                         />
                       </span>{" "}
                       Chat support
                     </p>
                     <p className="p-2  card_list">
                       <span>
-                        <img
+                        <Image
                           className="tick"
-                          src="./images/PricingCheck (1).png"
+                          alt=""
+                          src="/images/PricingCheck (1).png"
+                          width={50}
+                          height={50}
                         />
                       </span>{" "}
                       Only 7 days trial
@@ -94,19 +105,22 @@ const Cards = () => {
                     <p className="p-2 text_gray card_list">
                       {" "}
                       <span>
-                        <img className="tick" src="./images/close.png" />
+                        <Image className="tick" width={50}
+                          height={50} alt="" src="/images/close.png" />
                       </span>
                       All games access
                     </p>
                     <p className="p-2 text_gray card_list">
                       <span>
-                        <img className="tick" src="./images/close.png" />
+                        <Image className="tick" width={50}
+                          height={50} alt="" src="/images/close.png" />
                       </span>{" "}
                       New benefits for game connection
                     </p>
                     <p className="p-2 text_gray card_list">
                       <span>
-                        <img className="tick" src="./images/close.png" />
+                        <Image className="tick" width={50}
+                          height={50} alt="" src="/images/close.png" />
                       </span>{" "}
                       Stable connection
                     </p>
@@ -132,7 +146,9 @@ const Cards = () => {
                 </div>
                 <div className="basic-card">
                   <div className="basic-image">
-                    <img
+                    <Image
+                      width={50}
+                      height={50}
                       className="diamond_img"
                       src="/images/diamond_blue.png"
                     />
@@ -152,38 +168,43 @@ const Cards = () => {
                   <div className="content p-4">
                     <p className="p-2  card_list">
                       <span>
-                        <img className="tick" src="./images/PricingCheck.png" />
+                        <Image className="tick" width={50}
+                          height={50} alt="" src="/images/PricingCheck.png" />
                       </span>{" "}
                       You can Use only 4 games
                     </p>
                     <p className="p-2 card_list">
                       <span>
-                        <img className="tick" src="./images/PricingCheck.png" />
+                        <Image className="tick" width={50}
+                          height={50} alt="" src="/images/PricingCheck.png" />
                       </span>{" "}
                       Chat support
                     </p>
                     <p className="p-2  card_list">
                       <span>
-                        <img className="tick" src="./images/PricingCheck.png" />
+                        <Image className="tick" width={50}
+                          height={50} alt="" src="/images/PricingCheck.png" />
                       </span>{" "}
                       Only 7 days trial
                     </p>
                     <p className="p-2  card_list">
                       {" "}
                       <span>
-                        <img className="tick" src="./images/PricingCheck.png" />
+                        <Image className="tick" width={50}
+                          height={50} alt="" src="/images/PricingCheck.png" />
                       </span>
                       All games access
                     </p>
                     <p className="p-2  card_list">
                       <span>
-                        <img className="tick" src="./images/PricingCheck.png" />
+                        <Image className="tick" width={50} height={50} alt="" src="/images/PricingCheck.png" />
                       </span>{" "}
                       New benefits for game connection
                     </p>
                     <p className="p-2  card_list">
                       <span>
-                        <img className="tick" src="./images/PricingCheck.png" />
+                        <Image className="tick" width={50}
+                          height={50} alt="" src="/images/PricingCheck.png" />
                       </span>{" "}
                       Stable connection
                     </p>
@@ -237,9 +258,12 @@ const Cards = () => {
               <div className="creditcard_main">
                 <div>
                   <span className="ww">
-                    <img
+                    <Image
                       className=""
-                      src="./images/direction-down 01.png"
+                      width={50}
+                      height={50}
+
+                      src="/images/direction-down 01.png"
                       alt="Image 3"
                     />
                     Credit Card
@@ -247,29 +271,39 @@ const Cards = () => {
                   <span className="pay-opt">Option-1</span>{" "}
                 </div>
                 <span className="images">
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/XMLID_328.png"
+                    src="/images/XMLID_328.png"
                     alt="Image 1"
                   />
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/visa.png"
+                    src="/images/visa.png"
                     alt="Image 1"
                   />
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/elo.png"
+                    src="/images/elo.png"
                     alt="Image 1"
                   />
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/hipercard.png"
+                    src="/images/hipercard.png"
                     alt="Image 1"
                   />
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/american-express.png"
+                    src="/images/american-express.png"
                     alt="Image 1"
                   />
                 </span>
@@ -334,9 +368,11 @@ const Cards = () => {
               <div className="creditcard_main">
                 <div>
                   <span className="ww">
-                    <img
+                    <Image
+                      width={50}
+                      height={50}
                       className=""
-                      src="./images/direction-down 01.png"
+                      src="/images/direction-down 01.png"
                       alt="Image 3"
                     />
                     Pay Pal{" "}
@@ -344,9 +380,11 @@ const Cards = () => {
                   <span className="pay-opt">Option-2</span>
                 </div>
                 <span className="images">
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/payment-methods_light_paypal.png"
+                    src="/images/payment-methods_light_paypal.png"
                     alt="Image 1"
                   />
 
@@ -395,9 +433,11 @@ const Cards = () => {
               <div className="creditcard_main">
                 <div>
                   <span className="ww">
-                    <img
+                    <Image
+                      width={50}
+                      height={50}
                       className=""
-                      src="./images/direction-down 01.png"
+                      src="/images/direction-down 01.png"
                       alt="Image 3"
                     />
                     Bitcoin{" "}
@@ -405,9 +445,11 @@ const Cards = () => {
                   <span className="pay-opt">Option-3</span>
                 </div>
                 <span className="images">
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/bitcoin.png"
+                    src="/images/bitcoin.png"
                     alt="Image 1"
                   />
 
@@ -455,9 +497,11 @@ const Cards = () => {
               <div className="creditcard_main">
                 <div>
                   <span className="ww">
-                    <img
+                    <Image
+                      width={50}
+                      height={50}
                       className=""
-                      src="./images/direction-down 01.png"
+                      src="/images/direction-down 01.png"
                       alt="Image 3"
                     />
                     Other{" "}
@@ -465,19 +509,25 @@ const Cards = () => {
                   <span className="pay-opt">Option - 4</span>
                 </div>
                 <span className="images">
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/unionpay.png"
+                    src="/images/unionpay.png"
                     alt="Image 1"
                   />
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/payment-methods_light_qiwi.png"
+                    src="/images/payment-methods_light_qiwi.png"
                     alt="Image 1"
                   />
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/payment-methods_light_ripple.png"
+                    src="/images/payment-methods_light_ripple.png"
                     alt="Image 1"
                   />
 
@@ -491,19 +541,25 @@ const Cards = () => {
                   CONTINUE BELOW TO BUY A VPN SUBSCRIPTION WITH PAYMENTWALL.
                 </p>
                 <div className="flex gap-12 mt-3">
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/unionpay.png"
+                    src="/images/unionpay.png"
                     alt="Image 1"
                   />
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/bitcoin.png"
+                    src="/images/bitcoin.png"
                     alt="Image 2"
                   />
-                  <img
+                  <Image
+                    width={50}
+                    height={50}
                     className="payment_icon"
-                    src="./images/payment-methods_light_ripple.png"
+                    src="/images/payment-methods_light_ripple.png"
                     alt="Image 3"
                   />
                 </div>
