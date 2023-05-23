@@ -149,6 +149,7 @@ const Cards = () => {
                     <Image
                       width={50}
                       height={50}
+                      alt=""
                       className="diamond_img"
                       src="/images/diamond_blue.png"
                     />

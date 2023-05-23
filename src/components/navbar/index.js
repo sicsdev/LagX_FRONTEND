@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from "react";
 import Link from 'next/link';
+import Image from 'next/image';
 import './navbar.css';
 import { usePathname } from 'next/navigation';
 
@@ -16,7 +17,8 @@ const Navbar = () => {
                     <div className="flex items-center justify-between h-20">
                         <div className="flex items-center logo">
                             <Link href="/">
-                                <img src='/images/logo.png' />
+                                <Image alt="" width={50}
+                                    height={50} src='/images/logo.png' />
                             </Link>
                         </div>
                         {/* <div className="hidden md:flex links"> */}
